@@ -12,7 +12,7 @@ export default function FeaturedProducts({ excludeId }) {
     useEffect(() => {
         const fetchFeaturedProducts = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/api/products?featured=true');
+                const res = await axios.get('https://gygnus-jewelry-e-commerce.onrender.com/api/products?featured=true');
                 // Filter out the current product if excludeId is provided
                 const filteredProducts = excludeId
                     ? res.data.filter(product => product._id !== excludeId)
